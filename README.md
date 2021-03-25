@@ -1,0 +1,2 @@
+# qcli
+Quarkus CLI
