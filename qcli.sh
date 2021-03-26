@@ -2,6 +2,14 @@
 
 set -euo pipefail
 
+if [[ "$@" == "" ]]; then
+  echo "Options:"
+  echo "  create"
+  echo "  list-extensions"
+  echo "  add-extensions {comma sep extensions}"
+  exit 0;
+fi
+
 if [[ "$1" == "create" ]]; then
     echo "Creating new project"
     mvn io.quarkus:quarkus-maven-plugin:1.11.2.Final:create
